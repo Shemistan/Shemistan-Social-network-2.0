@@ -31,4 +31,3 @@ def new_post(request):
 
     form = PostForm()
     return render(request, 'new.html', {'form': form})
-
