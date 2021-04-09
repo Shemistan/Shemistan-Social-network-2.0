@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Добавить новый пост{% endblock %}
+{% block header %}<p align="center">Добавить новый пост{% endblock %}</p>
+{% block content %}
+  <form method="post">
+                    {% csrf_token %}
+    <p align="center"> Выберите группу<br>
+        {{ form.group }} <br>
+        Текст поста <br>
+        {{ form.text }}<br>
+         <input type="submit" value="Отправить">
+    </p>
+  </form>
+{% endblock %}
