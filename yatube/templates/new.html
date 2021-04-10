@@ -2,12 +2,12 @@
 {% block title %}Добавить новый пост{% endblock %}
 {% block header %}<p align="center">Добавить новый пост{% endblock %}</p>
 {% block content %}
-  <form method="post">
-                    {% csrf_token %}
+  <form method="post" action="{% url 'new' %}">
+      {% csrf_token %}
     <p align="center"> Выберите группу<br>
-        {{ form.group }} <br>
-        Текст поста <br>
-        {{ form.text }}<br>
+        {% for data in form %}
+        {{ data }}<br>
+        {% endfor %}
          <input type="submit" value="Отправить">
     </p>
   </form>
