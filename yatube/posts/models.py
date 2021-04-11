@@ -21,14 +21,15 @@ class Post(models.Model):
         blank=True,
         null=True,
         related_name="posts",
-        verbose_name="Группа", help_text="Выберите группу"
+        verbose_name="Группа",
+        help_text="Выберите группу"
     )
 
     class Meta:
         ordering = ["-pub_date"]
 
     def __str__(self):
-        show_to = f'{self.author} {self.pub_date} {self.text}'
+        show_to = f'{self.author} {self.pub_date}'
         return show_to
 
 
