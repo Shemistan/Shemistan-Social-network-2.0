@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block title %}Добавить новый пост{% endblock %}
-{% block header %}<p align="center">Добавить новый пост{% endblock %}</p>
+{% block header %}<p align="center">Добавить новый пост</p>{% endblock %}
 {% block content %}
   <form method="post" action="{% url 'new' %}">
       {% csrf_token %}
@@ -24,10 +24,5 @@
               Отправить
           </button>
       </div>
-
-
-
-
-
   </form>
 {% endblock %}
