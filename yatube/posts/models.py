@@ -29,7 +29,7 @@ class Post(models.Model):
         ordering = ["-pub_date"]
 
     def __str__(self):
-        show_to = f'{self.author} {self.pub_date} '
+        show_to = f'{self.author} {self.pub_date} {self.text [:50]}'
         return show_to
 
 
